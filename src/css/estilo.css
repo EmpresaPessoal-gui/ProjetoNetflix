@@ -1,0 +1,62 @@
+:root{
+
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    background:#000;
+    font-family:Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+.logo{
+    width:100px;
+    height:70px;
+}
+.cabecalho{
+    background:#000;
+    padding:20px;
+}
+.cabecalho-nav{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cabecalho-menu{
+    /* sem bolinhas */
+    list-style:none;
+    /* um do lado do outro */
+    display:flex;
+}
+.cabecalho-menu li{
+    margin-left:20px;
+}
+.cabecalho-menu a{
+    color:white;
+    text-decoration:none;
+}
+.banner{
+    background-image: url(../assets/Game6.jpg);
+    background-size: cover;
+    height:500px;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    text-align:center;
+    position:relative;
+}
+/* dois pontos são pseudo elementos, executa uma ação antes */
+.banner::before{
+    content:"" ;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.5);
+    z-index: 1;
+    
+}
