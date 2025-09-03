@@ -57,6 +57,76 @@ body{
     width:100%;
     height:100%;
     background:rgba(0,0,0,0.5);
-    z-index: 1;
-    
+    z-index: 1; 
+    /* garante que outras coisas fiquem acima de tal item, quanto maior o número, vai ficando acima */
+}
+.banner-conteudo{
+    width:600px;
+    position:relative;
+    z-index:2;
+}
+.banner-titulo{
+    font-size:3em;
+    margin-bottom: 20px;
+}
+.banner-descricao{
+    font-size:1.2rem;
+    margin-bottom:30px;
+}
+.banner-btn{
+    background:#e50914;
+    padding: 10px 30px;
+    border-radius:10px;
+    color:#fff;
+    border:none;
+    margin:0 10px;
+}
+.banner-btn:hover{
+    box-shadow:5px 5px 5px black;
+    transition: 0.5s;
+    /* transform: translateX(5px); */
+    /* transform:rotate(360deg); */
+    transform: scale(110%);
+}
+.sessao-filmes{
+    padding:20px;
+}
+.filme-titulo{
+    font-size:2em;
+    margin-bottom:20px;
+}
+.carrossel{
+    position:relative;
+    overflow:hidden;
+}
+.carrossel img{
+    width:100%;
+    height:auto;
+    display:block;
+    border-radius:5px;
+    box-shadow: 5px 5px 8px rgba(0,0,0,0.3);
+    transition:transform 0.3s ease-in-out;
+}
+.carrossel-lista{
+    display:flex;
+    transition: transform 0.5s ease-in-out;
+}
+.carrossel-item{
+    min-width:200px;
+    padding:10px;
+}
+.btn-carrossel{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    background:rgba(0,0,0,0.5);
+    border:none;
+    padding:10px;
+    cursor:pointer;
+}
+.btn-anterior{
+left:0;
+}
+.btn-proximo{
+    right:0;
 }
