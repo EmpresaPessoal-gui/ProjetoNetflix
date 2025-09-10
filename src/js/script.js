@@ -1,52 +1,107 @@
-// array de objetos com as imagens e informações do banner [array] {objeto} - possui atributos
-const bannerItems = [
+//ARRAY DE OBJETOS COM AS IMAGENS E INFORMAÇÕES DO BANNER
+const bannerItems =[
 {
-    imagem:"../assets/Game1.jpg",
-    titulo:"Titulo do filme 1",
-    descricao:"Filme 1"
+    imagem:"./src/assets/Game1.jpg",
+    titulo: "TItulo do filme 1",
+    descricao: "Filme 1"
 },
 {
-    imagem:"../assets/Game2.jpg",
-    titulo:"Titulo do filme 2",
-    descricao:"Filme 2"
+    imagem:"./src/assets/Game2.jpg",
+    titulo: "TItulo do filme 2",
+    descricao: "Filme 2"
 },
+
 {
-    imagem:"../assets/Game3.jpg",
-    titulo:"Titulo do filme 3",
-    descricao:"Filme 3"
+    imagem:"./src/assets/Game3.jpg",
+    titulo: "TItulo do filme 3",
+    descricao: "Filme 3"
 }
 
 ];
 
-//declarando as variáveis e elementos com DOM -- "get element by id" (Document object mod)
-const tempo = 5000; //tempo em milissegundos
-const elementoBanner = document.querySelector(".banner"); // pega a primeira classe/id chamada .banner
+//DECLARANDO AS VARIAVEIS E ELEMENTOS COM DOM(DOCUMENT OBJECT MODEL)
+let i= 0;// inicio da contagem das imagens
+const tempo = 5000; // tempo em milissegundos
+const elementoBanner = document.querySelector(".banner");
 const elementoTitulo = document.querySelector(".banner-titulo");
-const elementoDescricao = document.querySelector (".banner-descricao");
-let i=0; // inicio da contagem das imagens!!
+const elementoDescricao = document.querySelector(".banner-descricao");
 
-// função para o slideshow
+
+// FUNÇÃO PARA O SLIDESHOW
 
 function slideShow(){
-    //altera a imagem de fundo do banner
-    // `` - templete strings ou strings literais!
-    // `url($ {bannerItems}/)` -- concatena, juntando banner items tbm, permitindo o acesso as imagens (url)!!
-    elementoBanner.computedStyleMap.backgroundImage = `url($ {bannerItems[i].imagem}/)`
-    //altera o titulo do banner, acessa cada parte (titulo, descricao...)
-    elementoTitulo.textContent = bannerItems [i].titulo;
+    // ALTERA A IMAEM DE FUNDO DO BANNER
+    // ``- template strings ou string literais forma de concatenar
+    elementoBanner.style.backgroundImage = `url(${bannerItems[i].imagem})`;
+    // ALTERA O TITULO DO BANNER
+    elementoTitulo.textContent =bannerItems[i].titulo;
+     // ALTERA O DESCRIÇÃO DO BANNER
     elementoDescricao.textContent = bannerItems[i].descricao;
 
-    //incrementa o indice (i)- zerado, e reinicia quando chegar no final do array. ++ = incremento
-    // irá começar no zero, ir para proxima (1) lendo a primeira img, pra proxima (2), pra proxima (3) até chegar ao fim, dps repete para a primeira
-    // vai continuar incrementando valores até atingir 1, 2 ou 3!
-    // se o i for maior que a quantidade de imagens, volta ao início!!!
+    // INCREMENTA O INDECE (i) e reinicia quando chegar no final do array
+
+    // se o i for maior que a quantidade de imagems volta para o inicio
     i++;
-    if (i >= bannerItems.length){
-        i = 0;
+    if( i >= bannerItems.length){
+        i =0;
     }
-    //chama a função novamente após o tempo definido
-    setTimeout(slideShow,tempo);
+    // chama a função noamente após o tempo definido
+    setTimeout(slideShow, tempo);
 
 }
-//inicia o slide show
+// inicia o slideShow da função
 slideShow()
+
+
+// // array de objetos com as imagens e informações do banner [array] {objeto} - possui atributos
+// const bannerItems = [
+// {
+//     imagem:"./src/assets/Game1.jpg",
+//     titulo:"Titulo do filme 1",
+//     descricao:"Filme 1"
+// },
+// {
+//     imagem:"./src/assets/Game2.jpg",
+//     titulo:"Titulo do filme 2",
+//     descricao:"Filme 2"
+// },
+// {
+//     imagem:"./src/assets/Game3.jpg",
+//     titulo:"Titulo do filme 3",
+//     descricao:"Filme 3"
+// }
+
+// ];
+
+// //declarando as variáveis e elementos com DOM -- "get element by id" (Document object mod)
+// const tempo = 5000; //tempo em milissegundos
+// const elementoBanner = document.querySelector(".banner"); // pega a primeira classe/id chamada .banner
+// const elementoTitulo = document.querySelector(".banner-titulo");
+// const elementoDescricao = document.querySelector (".banner-descricao");
+// let i=0; // inicio da contagem das imagens!!
+
+// // função para o slideshow
+
+// function slideShow(){
+//     //altera a imagem de fundo do banner
+//     // `` - templete strings ou strings literais!
+//     // `url($ {bannerItems}/)` -- concatena, juntando banner items tbm, permitindo o acesso as imagens (url)!!
+//     elementoBanner.computedStyleMap.backgroundImage = `url(${bannerItems[i].imagem})`;
+//     //altera o titulo do banner, acessa cada parte (titulo, descricao...)
+//     elementoTitulo.textContent = bannerItems [i].titulo;
+//     elementoDescricao.textContent = bannerItems[i].descricao;
+
+//     //incrementa o indice (i)- zerado, e reinicia quando chegar no final do array. ++ = incremento
+//     // irá começar no zero, ir para proxima (1) lendo a primeira img, pra proxima (2), pra proxima (3) até chegar ao fim, dps repete para a primeira
+//     // vai continuar incrementando valores até atingir 1, 2 ou 3!
+//     // se o i for maior que a quantidade de imagens, volta ao início!!!
+//     i++;
+//     if (i >= bannerItems.length){
+//         i = 0;
+//     }
+//     //chama a função novamente após o tempo definido
+//     setTimeout(slideShow,tempo);
+
+// }
+// //inicia o slide show
+// slideShow()
