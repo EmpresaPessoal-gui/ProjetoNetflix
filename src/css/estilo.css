@@ -148,4 +148,45 @@ footer{
  text-align:center;
 }
 
-/* responsividade */
+#perfil{
+    width: 100%;
+    min-height: 555px; /* Usado min-height para flexibilidade*/
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    background:#222222;
+    padding:20px 0; /* Adicionado para dar um respiro*/
+}
+.perfis-container{
+    width: 90%;
+    max-width: 900px; /* Definido um máximo para evitar quebra em telas muito grandes */
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+    justify-content: center;
+    gap: 20px;
+}
+.perfil-card{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    text-align:center;
+}
+.perfil-card h3{
+    color:#fff;
+    font-size:20px;
+    margin-top:10px;
+}
+.perfil-img{
+    width:120px;
+    height:120px;
+    border:2px solid #fff;
+    border-radius:100%;
+    object-fit: cover; /* Recorta a imagem para preencher o contêiner sem distorcê-la */
+}
+.perfil-img-link{
+    display:block;
+    width:120px;
+    height:120px;
+    overflow:hidden;
+    border-radius: 50%;
+}
