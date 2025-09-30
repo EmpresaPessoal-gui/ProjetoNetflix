@@ -229,12 +229,13 @@ footer{
     color:#1a1d1f;
 }
 
-#imagens-historia{
+#imagens-historia img{
     width:600px;
     display: flex;
     align-items:center;
     justify-content:center;
 }
+
 .historia-personagem{
     width:100%;
     min-height:555px;
